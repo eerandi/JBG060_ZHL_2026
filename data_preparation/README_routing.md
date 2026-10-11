@@ -255,6 +255,6 @@ binary; keep the encoding when you edit it.
 
 ## Housekeeping
 
-- `data/processed/` is not in `.gitignore`, but `build_baseline` writes there, including
-  `internal/sites.parquet` with facility locations, which `README_baseline.md` says must stay out of
-  git. Don't commit it; adding `data/processed` to `.gitignore` would prevent accidents.
+- `data/processed/` and `.claude/` are in `.gitignore`. `build_baseline` writes to `data/processed/`,
+  including `internal/sites.parquet` with facility locations, which must stay out of git. They were
+  committed once by mistake and removed again, so older commits still contain them.
